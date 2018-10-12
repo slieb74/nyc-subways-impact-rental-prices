@@ -51,4 +51,6 @@ The best performing model was the Random Forest Classifier, which had an Accurac
 </p>
 
 ## Next Steps
-Due to time constraints, we had to limit the scope of our project to Manhattan and Brooklyn, but in the future, I would love to explore both the Bronx and Queens as well. In addition, I want to try to predict how the upcoming L Train shutdown will affect rental prices in Williamsburg. I think it would also be great to add Citibike data to our project and measure the impact dock openings have had on rental prices. 
+* Due to time constraints, we had to limit the scope of our project to Manhattan and Brooklyn, but in the future, I would love to explore both the Bronx and Queens as well
+* Would like to predict how the upcoming L Train shutdown will affect rental prices in Williamsburg
+* Add Citibike data to our project and measure the impact dock openings have had on rental prices
