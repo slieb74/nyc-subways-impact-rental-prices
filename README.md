@@ -10,10 +10,9 @@ We gathered data from four sources:
   - Median neighborhood rental prices and sale-to-rent ratios from Zillow
   - Apartment coordinates from GoogleMaps API
 
-- Our apartment data consisted of sales instead of rentals, so we used the median neighborhood rental prices from Zillow to convert the apartment sale prices into a rent estimate that better suited our goal. We wanted to focus on rentals instead of sales because it is less static of a market and would therefore see a greater impact from changes in subway access.
+Our apartment data consisted of sales instead of rentals, so we used the median neighborhood rental prices from Zillow to convert the apartment sale prices into a rent estimate that better suited our goal. We wanted to focus on rentals instead of sales because it is less static of a market and would therefore see a greater impact from changes in subway access.
 
-- In order to get the distance from each apartment to the subway entrance, we used GoogleMaps API to convert addresses into coordinates, from which we could calculate the distance in miles using the Haversine formula.
-- From there, we found for each apartment every station with unique subway access within 0.55 miles of the apartment (roughly a 10-minute walk)
+In order to get the distance from each apartment to the subway entrance, we used GoogleMaps API to convert addresses into coordinates, from which we could calculate the distance in miles using the Haversine formula. From there, we found for each apartment every station with unique subway access within 0.55 miles of the apartment (roughly a 10-minute walk)
 
 ## Mapping using GeoPandas
 To get a sense of where our apartments were located, and to ensure that we were not focusing on a few neighborhoods, we used GeoPandas to map each neighborhood, apartment, and subway line. 
