@@ -10,7 +10,7 @@ We gathered data from four sources:
   - Median neighborhood rental prices and sale-to-rent ratios from Zillow
   - Apartment coordinates from GoogleMaps API
 
-Our apartment data consisted of sales instead of rentals, so we used the median neighborhood rental prices from Zillow to convert the apartment sale prices into a rent estimate that better suited our goal. We wanted to focus on rentals instead of sales because it is less static of a market and would therefore see a greater impact from changes in subway access.
+Our apartment data consisted of sales instead of rentals, so we used the median neighborhood rental prices from Zillow to convert the apartment sale prices into a rent estimate that better suited our goal. We wanted to focus on rentals instead of sales because it is less static of a market and therefore would see a greater impact from changes in subway access.
 
 In order to get the distance from each apartment to the subway entrance, we used GoogleMaps API to convert addresses into coordinates, from which we could calculate the distance in miles using the Haversine formula. From there, we found for each apartment every station with unique subway access within 0.55 miles of the apartment (roughly a 10-minute walk)
 
@@ -38,6 +38,12 @@ The four models we used were:
   
 The best performing model was the Random Forest Classifier, which had an Accuracy of 74.52% and AUC of 81.57%.
 
+The optimal hyperparameters for the Random Forest Classifier, cross-validated using GridSearchCV, were:
+  - 250 estimators
+  - Gini impurity
+  - Minimum 5 sample splits
+  - Minimum 5 sample leafs
+  
 ###### Results
 <img src="https://github.com/slieb74/nyc-subways-impact-rental-prices/blob/master/images/Screen%20Shot%202018-10-09%20at%201.59.45%20PM.png" height="100" width="150">
 
@@ -53,3 +59,4 @@ The best performing model was the Random Forest Classifier, which had an Accurac
 * Due to time constraints, we had to limit the scope of our project to Manhattan and Brooklyn, but in the future, I would love to explore both the Bronx and Queens as well
 * Would like to predict how the upcoming L Train shutdown will affect rental prices in Williamsburg
 * Add Citibike data to our project and measure the impact dock openings have had on rental prices
+* Make the maps interactive so that when the user hovers over an apartment, it sees the rental price, address, and neighborhood median price
